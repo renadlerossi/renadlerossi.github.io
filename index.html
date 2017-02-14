@@ -6,10 +6,72 @@
 
 		<!-- Responsive Metatag -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<title>Renato Rossi - CurrencyFair Test</title>
 	</head>
 	<body>
-
+		<header class="main-header">
+			<a href="#" class="logo">CurrencyFair</a>
+		</header>
+		<div class="left-content">
+			<section class="steps">
+				<ul>
+					<li class="active">
+						<p>
+							<small>Step 1</small><br>
+							Transaction info
+						</p>
+					</li>
+					<li>
+						<p>
+							<small>Step 2</small><br>
+							Recipient info
+						</p>
+					</li>
+					<li>
+						<p>
+							<small>Step 3</small><br>
+							Make Payment
+						</p>
+					</li>
+				</ul>
+			</section>
+			<section class="transaction-container">
+				<h1>Let's set up your transaction!</h1>
+				<h2>Specify the amount to be sent or received.</h2>
+				<div class="transaction-form">
+					<form>
+						<div class="sender-value">
+							<div class="field-header">
+								<label>You send</label>
+							</div>
+							<div class="input-wrapper">
+								<input type="text" name="sender">
+							</div>
+						</div>
+						<div class="receiver-value">
+							<div class="field-header">
+								<label>Reciever Gets</label>
+							</div>
+							<div class="input-wrapper">
+								<input type="text" name="receiver">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="transaction-details">
+					<ul>
+						<li class="details-header"><span class="description">Sending Details</span></li>
+						<li><span class="description">You send</span><span class="value you-send">€2000.00</span></li>
+						<li class="details-header"><span class="description">Receiving Details</span><span class="value info">As of right now <span class="icon info">Info</span></span></li>
+						<li><span class="description">Rate</span><span class="value rate">0.86022</span></li>
+						<li><span class="description">Fee</span><span class="value fee">£2.50</span></li>
+						<li><span class="description">Delivery Date</span><span class="value delivery-date">25th November</span></li>
+						<li><span class="description">Recipient gets</span><span class="value recipient-gets">£1717.94</span></li>
+						<li class="pitch">You save X compared to your bank!</li>
+					</ul>
+				</div>
+			</section>
+		</div>
 	</body>
 </html>
