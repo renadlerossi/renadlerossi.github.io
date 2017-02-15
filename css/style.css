@@ -249,7 +249,7 @@ footer .links {
 
 .input-wrapper {
 	float: left;
-	width: 70%;
+	width: 60%;
 	padding: 0 15px 15px;
 }
 
@@ -258,7 +258,7 @@ footer .links {
 }
 
 .input-wrapper input {
-	width: 80%;
+	width: 60%;
 	font-size: 2em;
 	border: 0;
 }
@@ -636,5 +636,8 @@ footer .links {
 	}
 	.transaction-details {
 		max-width: 300px;
+	}
+	.input-wrapper input {
+		width: 80%;
 	}
 }
