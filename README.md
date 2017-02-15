@@ -10,5 +10,5 @@ A few turn arounds were required as I wanted to use just raw JavaScript. In a re
 
 Would be great if you could give some feedback, as I enjoyed to do this challenge.
 
-Renato
-reindeerlab.co
+Renato<br>
+<a href="reindeerlab.co" target="_blank">reindeerlab.co</a>
