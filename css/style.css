@@ -236,7 +236,7 @@ footer .links {
 }
 
 .field-header {
-	width: 70%;
+	width: 60%;
     padding: 15px 15px 5px;
     float: left;
 }
@@ -292,6 +292,7 @@ footer .links {
     font-size: 0.85em;
     border: 0;
     background-color: transparent;
+    width: 65%;
 }
 
 .receiver-value {
