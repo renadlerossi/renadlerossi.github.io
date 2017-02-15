@@ -39,23 +39,57 @@
 	}
 
 	// Currencies Declaration
-	var currenciesArray = [];
-	var euro = new currency("EUR", 0.84, "images/eur.png", "€");
-	var pounds = new currency("GBP", 1.74, "images/gbp.png", "£");
-	currenciesArray.push(euro, pounds);
+	var currenciesArray = [
+		{"currencyName":"EUR", "currencyRate":0.84, "currencyFlag":"images/eur.png", "currencySymbol":"€"},
+		{"currencyName":"GBP", "currencyRate":1.74, "currencyFlag":"images/gbp.png", "currencySymbol":"£"}
+	];
 
+	// Populate options for currency select
 	var selectSender = document.getElementById('sender-select');
-	for (element in currenciesArray){
+	for (var i = 0 in currenciesArray){
 	    var opt = document.createElement('option');
-	    opt.value = element;
-	    opt.innerHTML = element.name;
+	    opt.value = i;
+	    opt.innerHTML = currenciesArray[i].currencyName;
 	    selectSender.appendChild(opt);
 	}
 
+	// Populate options for currency select
 	var selectReceiver = document.getElementById('receiver-select');
-	for (element in currenciesArray){
+	for (var i = 0 in currenciesArray){
 	    var opt = document.createElement('option');
-	    opt.value = element;
-	    opt.innerHTML = element.name;
+	    opt.value = i;
+	    opt.innerHTML = currenciesArray[i].currencyName;
 	    selectReceiver.appendChild(opt);
+	}
+
+	// Collect inputs value
+	var sender_value = selectSender.value
+	var receiver_value = selectReceiver.value
+
+	// Dynamic content
+	window.onload = function() {
+		// Define inputs on Window Load
+		if (selectSender.selectedIndex == 0) {
+            selectReceiver.options[1].selected = true;
+        } else {
+            selectReceiver.options[0].selected = true;
+        }
+        // Watch for input changes
+	    selectSender.onchange = function() {
+	        if (selectSender.selectedIndex == 0) {
+	            selectReceiver.options[1].selected = true;
+	        } else {
+	            selectReceiver.options[0].selected = true;
+	        }
+
+	    }
+	    selectReceiver.onchange = function() {
+	    	if (selectReceiver.selectedIndex == 0) {
+	    		selectSender.options[1].selected = true;
+	    	} else {
+	    		selectSender.options[0].selected = true;
+	    	}
+	    }
+
+	    var receiver_symbol = document.getElementById('receiver_symbol');
 	}
