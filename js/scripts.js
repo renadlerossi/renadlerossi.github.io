@@ -30,14 +30,6 @@
 	    input.value = x1 + x2;
 	}
 
-	// Currency constructor
-	function currency(name, rate, flag, symbol) {
-	    this.Name = name;
-	    this.Rate = rate;
-	    this.Flag = flag;
-	    this.Symbol = symbol;
-	}
-
 	// Currencies Declaration
 	var currenciesArray = [
 		{"currencyName":"EUR", "currencyRate":0.84, "currencyFlag":"images/eur.png", "currencySymbol":"€"},
@@ -66,7 +58,20 @@
 	var sender_value = selectSender.value
 	var receiver_value = selectReceiver.value
 
-	// Dynamic content
+	// Find variables in the template to print
+	var sender_variables = {symbol: document.getElementById('sender-symbol'), flag: document.getElementById('sender-flag')};
+	var receiver_variables = {symbol: document.getElementById('receiver-symbol'), flag: document.getElementById('receiver-flag')};
+
+	function updatedVariables() {
+		sender_value = selectSender.value
+		receiver_value = selectReceiver.value
+
+		sender_variables.symbol.innerHTML = currenciesArray[sender_value].currencySymbol;
+		sender_variables.flag.style.backgroundImage = "url(" + currenciesArray[sender_value].currencyFlag + ")";
+		receiver_variables.flag.style.backgroundImage = "url(" + currenciesArray[receiver_value].currencyFlag + ")";
+		receiver_variables.symbol.innerHTML = currenciesArray[receiver_value].currencySymbol;
+	}
+
 	window.onload = function() {
 		// Define inputs on Window Load
 		if (selectSender.selectedIndex == 0) {
@@ -78,18 +83,21 @@
 	    selectSender.onchange = function() {
 	        if (selectSender.selectedIndex == 0) {
 	            selectReceiver.options[1].selected = true;
+	            updatedVariables();
 	        } else {
 	            selectReceiver.options[0].selected = true;
+	            
+	            updatedVariables();
 	        }
 
 	    }
 	    selectReceiver.onchange = function() {
 	    	if (selectReceiver.selectedIndex == 0) {
 	    		selectSender.options[1].selected = true;
+	    		updatedVariables();
 	    	} else {
 	    		selectSender.options[0].selected = true;
+	    		updatedVariables();
 	    	}
 	    }
-
-	    var receiver_symbol = document.getElementById('receiver_symbol');
 	}
