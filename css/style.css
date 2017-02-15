@@ -98,6 +98,7 @@ h3 {
 
 a {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 section {
@@ -138,9 +139,13 @@ footer .links {
 }
 
 .right-content {
-	width: 100%;
-	float: left;
-	height: auto;
+	width: 39%;
+    height: calc(100% + 82px);
+    position: absolute;
+    top: 82px;
+    right: 0;
+    background-color: #FBFBFB;
+    border-left: 1px solid #E0E0E0;
 }
 
 .main-header {
@@ -151,11 +156,17 @@ footer .links {
 	position: relative;
 }
 
+.logo-wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
 .logo {
 	display: block;
     width: 150px;
     height: 42px;
-    background: url(../images/cf_logo.svg) center center;
+    background: url(../images/cf_logo.svg) -13px center;
     background-size: 100%;
     text-indent: -999999999px;
     direction: ltr;
@@ -223,7 +234,7 @@ footer .links {
 }
 
 .field-header {
-	width: 100px;
+	width: 70%;
     padding: 15px 15px 5px;
     float: left;
 }
@@ -236,13 +247,18 @@ footer .links {
 
 .input-wrapper {
 	float: left;
-	width: 150px;
+	width: 70%;
 	padding: 0 15px 15px;
 }
 
-.input-wrapper input {
-	width: 100%;
+.currency-symbol {
 	font-size: 2em;
+}
+
+.input-wrapper input {
+	width: 80%;
+	font-size: 2em;
+	border: 0;
 }
 
 .input-wrapper input:focus {
@@ -272,6 +288,8 @@ footer .links {
 .select-wrapper select {
 	float: right;
     font-size: 0.85em;
+    border: 0;
+    background-color: transparent;
 }
 
 .receiver-value {
@@ -386,14 +404,21 @@ footer .links {
 	float: left;
 	margin-top: 20px;
 	color: white;
+	cursor: pointer;
 }
 
-.button:hover, .button:active {
+.button:hover, .button:active, .button:focus {
 	background-color: rgba(110, 192, 230, 0.6);
+	outline: none;
 }
 
 .button:disabled {
 	opacity: 0.3;
+	cursor: default;
+}
+
+.button:disabled:hover {
+	background-color: rgba(110, 192, 230, 1);
 }
 
 
@@ -442,6 +467,7 @@ footer .links {
 	float: left;
     height: 18px;
     margin-right: 10px;
+    margin-left: 0;
 }
 
 .code-verifier {
@@ -523,6 +549,11 @@ footer .links {
 	margin-top: 20px;
 	margin-left: 20px;
 	color: #b0bec5;
+	cursor: pointer;
+}
+
+.back-button:active, .back-button:focus {
+	outline: none;
 }
 
 .code-options {
@@ -541,4 +572,63 @@ footer .links {
 	float: left;
 	margin-top: 20px;
 	color: #768895;
+}
+
+.md-show {
+	display: none;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+	h3 {
+		width: 80%;
+	}
+	section, footer {
+		float: right;
+	}
+	.left-content {
+		width: 60%;
+	}
+	.md-hide {
+		display: none;
+	}
+	.md-show {
+		display: block;
+	}
+	.transaction-details {
+		width: 34%;
+    	margin-left: 2.5%;
+    	position: fixed;
+	}
+	.verification-modal {
+		max-width: 600px;
+    	margin-left: 50%;
+    	left: -300px;
+	}
+	.verification-bottom {
+		width: 89.7%;
+	}
+	.access {
+		float: right;
+		margin-top: 36px;
+		text-align: right;
+	}
+	.code-options {
+		width: 98%;
+	}
+	.code-options a:last-child {
+		float: right;
+	}
+	.code ul li input {
+		font-size: 2em;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	section, footer {
+		max-width: 600px;
+	}
+	.transaction-details {
+		max-width: 300px;
+	}
 }

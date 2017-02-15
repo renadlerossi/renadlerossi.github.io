@@ -11,7 +11,9 @@
 	</head>
 	<body>
 		<header class="main-header">
-			<a href="#" class="logo">CurrencyFair</a>
+			<div class="logo-wrapper">
+				<a href="#" class="logo">CurrencyFair</a>
+			</div>
 		</header>
 		<div class="left-content">
 			<section class="steps">
@@ -46,13 +48,13 @@
 								<label>You send</label>
 							</div>
 							<div class="input-wrapper">
-								<input type="text" name="sender" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
+								<span class="currency-symbol">€</span>
+								<input type="text" name="sender" min="10" max="99000000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
 							</div>
 							<div class="select-wrapper">
 								<span class="icon" style="background:url('images/eur.png') center center;background-size:100%;"></span>
 								<select name="currencies">
-									<option value="eur">EUR</option>
-									<option value="gbp">GBP</option>
+									<option value="">EUR</option>
 								</select>
 							</div>
 						</div>
@@ -61,7 +63,8 @@
 								<label>Reciever Gets</label>
 							</div>
 							<div class="input-wrapper">
-								<input type="text" name="receiver" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
+								<span class="currency-symbol">£</span>
+								<input type="text" name="receiver" min="10" max="99000000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
 							</div>
 							<div class="select-wrapper">
 								<span class="icon" style="background:url('images/gbp.png') center center;background-size:100%;"></span>
@@ -72,7 +75,7 @@
 						</div>
 					</form>
 				</div>
-				<div class="transaction-details">
+				<div class="transaction-details md-hide">
 					<ul>
 						<li class="details-header"><span class="description">Sending Details</span></li>
 						<li><span class="description">You send</span><span class="value you-send">€2000.00</span></li>
@@ -93,6 +96,20 @@
 					<a href="#">Legal Stuff</a>
 				</div>
 			</footer>
+		</div>
+		<div class="right-content md-show">
+			<div class="transaction-details">
+					<ul>
+						<li class="details-header"><span class="description">Sending Details</span></li>
+						<li><span class="description">You send</span><span class="value you-send">€2000.00</span></li>
+						<li class="details-header"><span class="description">Receiving Details</span><span class="value info">As of right now <span class="icon info">Info</span></span></li>
+						<li><span class="description">Rate</span><span class="value rate">0.86022</span></li>
+						<li><span class="description">Fee</span><span class="value fee">£2.50</span></li>
+						<li><span class="description">Delivery Date</span><span class="value delivery-date">25th November</span></li>
+						<li><span class="description">Recipient gets</span><span class="value recipient-gets">£1717.94</span></li>
+						<li class="pitch">You save X compared to your bank!</li>
+					</ul>
+				</div>
 		</div>
 		<div id="float" class="float">
 			<div class="verification-modal">
