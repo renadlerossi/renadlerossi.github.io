@@ -49,11 +49,11 @@
 							</div>
 							<div class="input-wrapper">
 								<span class="currency-symbol">€</span>
-								<input type="text" name="sender" min="10" max="99000000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
+								<input type="text" name="sender" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
 							</div>
 							<div class="select-wrapper">
 								<span class="icon" style="background:url('images/eur.png') center center;background-size:100%;"></span>
-								<select name="currencies">
+								<select id="sender-select" name="currencies" class="currencies">
 									<option value="">EUR</option>
 								</select>
 							</div>
@@ -68,7 +68,7 @@
 							</div>
 							<div class="select-wrapper">
 								<span class="icon" style="background:url('images/gbp.png') center center;background-size:100%;"></span>
-								<select name="currencies">
+								<select id="receiver-select" name="currencies" class="currencies">
 									<option value="gbp">GBP</option>
 								</select>
 							</div>
