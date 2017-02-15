@@ -84,7 +84,64 @@
 						<li class="pitch">You save X compared to your bank!</li>
 					</ul>
 				</div>
+				<button type="button" class="button" onclick="activateModal()">Next</button>
 			</section>
+			<footer>
+				<div class="copyrights">© 2016 CurrencyFair</div>
+				<div class="links">
+					<a href="#">Help & Support</a>
+					<a href="#">Legal Stuff</a>
+				</div>
+			</footer>
 		</div>
+		<div id="float" class="float">
+			<div class="verification-modal">
+				<div class="verification-header">
+					<h2><span class="icon padlock"></span>Identity verification required</h2>
+					<h3>For your security, we ocassionally require you to verify your identity by entering a code sent to your mobile device.</h3>
+				</div>
+				<div class="code-verifier">
+					<p>Enter the code sent via SMS to</p>
+					<div class="code">
+						<form name="codeform">
+							<ul>
+								<li><input type="text" name="first-digit" maxlength="1" onkeyup="checkForm()"></li>
+								<li><input type="text" name="second-digit" maxlength="1" onkeyup="checkForm()"></li>
+								<li><input type="text" name="third-digit" maxlength="1" onkeyup="checkForm()"></li>
+								<li><input type="text" name="fourth-digit" maxlength="1" onkeyup="checkForm()"></li>
+								<li><input type="text" name="fifth-digit" maxlength="1" onkeyup="checkForm()"></li>
+								<li><input type="text" name="sixth-digit" maxlength="1" onkeyup="checkForm()"></li>
+							</ul>
+						</form>
+					</div>
+					<div class="code-options">
+						<a href="#"><span class="icon refresh">Refresh</span>Receive new code</a>
+						<a href="#"><span class="icon phone">Phone</span>Receive code via call instead</a>
+					</div>
+				</div>
+				<div class="verification-bottom">
+					<button id="verify" type="button" class="button" disabled>Verify Identity</button>
+					<button type="button" class="back-button" onclick="activateModal()">Back</button>
+					<a class="access">I can't access this mobile phone</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function activateModal() {
+				document.getElementById("float").classList.toggle('active');
+			}
+
+			function checkForm() {
+				var f = document.forms["codeform"].elements;
+			    var cansubmit = true;
+
+			    for (var i = 0; i < f.length; i++) {
+			        if ("value" in f[i] && f[i].value.length == 0)
+			            cansubmit = false;
+			    }
+
+			    document.getElementById('verify').disabled = !cansubmit;
+			}
+		</script>
 	</body>
 </html>

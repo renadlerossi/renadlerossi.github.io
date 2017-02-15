@@ -362,3 +362,160 @@ footer .links {
 	background: url('../images/icon-info.svg') center center;
 	background-size: 100%;
 }
+
+.icon.padlock {
+	background: url('../images/icon-padlock.svg') center center;
+	background-size: 100%;
+}
+
+.icon.refresh {
+	background: url('../images/icon-refresh.svg') center center;
+	background-size: 100%;
+}
+
+.icon.phone {
+	background: url('../images/icon-phone.svg') center center;
+	background-size: 100%;
+}
+
+.button {
+	padding: 15px 18px;
+	background-color: rgba(110, 192, 230, 1);
+	border: 1px solid #589AB8;
+	border-radius: 4px;
+	float: left;
+	margin-top: 20px;
+	color: white;
+}
+
+.button:hover, .button:active {
+	background-color: rgba(110, 192, 230, 0.6);
+}
+
+.button:disabled {
+	opacity: 0.3;
+}
+
+
+/* Modal */
+.float {
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all 0.5s; /* Safari */
+    -moz-transition: all 0.5s; /* Mozilla */
+    -o-transition: all 0.5s; /* Opera */
+    transition: all 0.5s;
+}
+
+.float.active {
+	opacity: 1;
+	pointer-events: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.75);
+	-webkit-transition: all 0.5s; /* Safari */
+    -moz-transition: all 0.5s; /* Mozilla */
+    -o-transition: all 0.5s; /* Opera */
+    transition: all 0.5s;
+}
+
+.verification-modal {
+	width: 90%;
+	position: absolute;
+	top: 50px;
+	left: 5%;
+}
+
+.verification-header {
+	padding: 20px 5%;
+	background-color: white;
+	border-top: 1px solid #E0E0E0;
+	border-left: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
+	border-radius: 4px 4px 0 0;
+}
+
+.verification-header .icon {
+	float: left;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.code-verifier {
+	float: left;
+	border-top: 1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0;
+	background-color: #FBFCFC;
+	padding: 40px 20px;
+}
+
+.code ul li {
+	width: 15%;
+	float: left;
+	margin: 20px 0.8% 0;
+	text-align: center;
+}
+
+.code ul li input {
+	width: 90%;
+	border: 1px solid #E0E0E0;
+	border-radius: 4px;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.code ul li input:focus, .code ul li input:active {
+	outline: none;
+	border: #64B5F6;
+}
+
+.verification-bottom {
+	width: 89.2%;
+	float: left;
+	padding: 0 5% 20px;
+	background-color: white;
+	border-bottom: 1px solid #E0E0E0;
+	border-left: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
+	border-radius: 0 0 4px 4px;
+}
+
+.access {
+	width: 40%;
+    float: left;
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #64B5F6;
+}
+
+.back-button {
+	float: left;
+	padding: 15px 18px;
+	background-color: #FBFCFC;
+	border: 1px solid #E0E0E0;
+	border-radius: 4px;
+	margin-top: 20px;
+	margin-left: 20px;
+	color: #b0bec5;
+}
+
+.code-options {
+	float: left;
+}
+
+.code-options .icon {
+	float: left;
+	margin: 0 5px;
+	width: 12px;
+	height: 12px;
+}
+
+.code-options a {
+	font-size: 0.8em;
+	float: left;
+	margin-top: 20px;
+	color: #768895;
+}
