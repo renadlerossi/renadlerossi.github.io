@@ -1,4 +1,5 @@
-Hi Currency Fair, thank you for giving me the opportunity to show my skills on this test.
+Hi Currency Fair,
+Thank you for giving me the opportunity to show my skills on this test.
 
 # A few things that I would like to explain about my code
 
