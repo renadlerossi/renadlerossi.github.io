@@ -1,7 +1,7 @@
-Hi Currency Fair,
-Thank you for giving me the opportunity to show my skills on this test.
+# Hi Currency Fair,
+<br>Thank you for giving me the opportunity to show my skills on this test.
 
-# A few things that I would like to explain about my code
+<h3>A few things that I would like to explain about my code</h3>
 
 On your live website, the currency rates, flags and symbols, returns from an API.
 I’ve populate those variables dynamically in a similar way to what I believe the API is returning. I did that so I could show some of my JavaScript skills and to make the UI more functional (as stated in the challenge prospect).
