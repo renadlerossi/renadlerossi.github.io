@@ -49,9 +49,9 @@
 							<div class="field-header">
 								<label>You send</label>
 							</div>
-							<div class="input-wrapper">
+							<div onclick="" onclick class="input-wrapper">
 								<span id="sender-symbol" class="currency-symbol">€</span>
-								<input type="text" name="sender" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
+								<input id="input-sender" value="2000" type="text" name="sender" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="convertCurrency(this);">
 							</div>
 							<div class="select-wrapper">
 								<span id="sender-flag" class="icon" style="background-image: url('images/eur.png'); background-position: center; background-size:100%;"></span>
@@ -66,7 +66,7 @@
 							</div>
 							<div class="input-wrapper">
 								<span id="receiver-symbol" class="currency-symbol">£</span>
-								<input type="text" name="receiver" min="10" max="99000000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
+								<input id="input-receiver" type="text" name="receiver" min="10" max="99000000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="convertCurrency(this);">
 							</div>
 							<div class="select-wrapper">
 								<span id="receiver-flag" class="icon" style="background-image: url('images/gbp.png'); background-position: center; background-size:100%;"></span>

@@ -30,11 +30,31 @@
 	    input.value = x1 + x2;
 	}
 
+	// Find variables in the template to print
+	var sender_variables = {symbol: document.getElementById('sender-symbol'), flag: document.getElementById('sender-flag')};
+	var receiver_variables = {symbol: document.getElementById('receiver-symbol'), flag: document.getElementById('receiver-flag')};
+	var input_sender = document.getElementById('input-sender');
+	var input_receiver = document.getElementById('input-receiver');
+
 	// Currencies Declaration
 	var currenciesArray = [
-		{"currencyName":"EUR", "currencyRate":0.84, "currencyFlag":"images/eur.png", "currencySymbol":"€"},
+		{"currencyName":"EUR", "currencyRate":0.86, "currencyFlag":"images/eur.png", "currencySymbol":"€"},
 		{"currencyName":"GBP", "currencyRate":1.74, "currencyFlag":"images/gbp.png", "currencySymbol":"£"}
 	];
+
+	function convertCurrency(input) {
+		var receiverInt = input_receiver.value.replace(",", "");;
+		var senderInt = input_sender.value.replace(",", "");
+		if (input == input_sender) {
+			input_receiver.value = senderInt * currenciesArray[sender_value].currencyRate;
+			formatForm(input_sender);
+			formatForm(input_receiver);
+		} else {
+			input_sender.value = receiverInt * currenciesArray[sender_value].currenciesRate;
+			formatForm(input_sender);
+			formatForm(input_receiver);
+		}
+	}
 
 	// Populate options for currency select
 	var selectSender = document.getElementById('sender-select');
@@ -58,10 +78,6 @@
 	var sender_value = selectSender.value
 	var receiver_value = selectReceiver.value
 
-	// Find variables in the template to print
-	var sender_variables = {symbol: document.getElementById('sender-symbol'), flag: document.getElementById('sender-flag')};
-	var receiver_variables = {symbol: document.getElementById('receiver-symbol'), flag: document.getElementById('receiver-flag')};
-
 	function updatedVariables() {
 		sender_value = selectSender.value
 		receiver_value = selectReceiver.value
@@ -73,6 +89,8 @@
 	}
 
 	window.onload = function() {
+		convertCurrency(input_sender);
+
 		// Define inputs on Window Load
 		if (selectSender.selectedIndex == 0) {
             selectReceiver.options[1].selected = true;
