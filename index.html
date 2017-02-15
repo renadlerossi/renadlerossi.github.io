@@ -46,7 +46,7 @@
 								<label>You send</label>
 							</div>
 							<div class="input-wrapper">
-								<input type="text" name="sender">
+								<input type="text" name="sender" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
 							</div>
 							<div class="select-wrapper">
 								<span class="icon" style="background:url('images/eur.png') center center;background-size:100%;"></span>
@@ -61,7 +61,7 @@
 								<label>Reciever Gets</label>
 							</div>
 							<div class="input-wrapper">
-								<input type="text" name="receiver">
+								<input type="text" name="receiver" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="formatForm(this)">
 							</div>
 							<div class="select-wrapper">
 								<span class="icon" style="background:url('images/gbp.png') center center;background-size:100%;"></span>
@@ -101,7 +101,7 @@
 					<h3>For your security, we ocassionally require you to verify your identity by entering a code sent to your mobile device.</h3>
 				</div>
 				<div class="code-verifier">
-					<p>Enter the code sent via SMS to</p>
+					<p>Enter the code sent via SMS to <span class="phone-number">+353</span><span class="phone-number">872251177</span></p>
 					<div class="code">
 						<form name="codeform">
 							<ul>
@@ -126,22 +126,6 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			function activateModal() {
-				document.getElementById("float").classList.toggle('active');
-			}
-
-			function checkForm() {
-				var f = document.forms["codeform"].elements;
-			    var cansubmit = true;
-
-			    for (var i = 0; i < f.length; i++) {
-			        if ("value" in f[i] && f[i].value.length == 0)
-			            cansubmit = false;
-			    }
-
-			    document.getElementById('verify').disabled = !cansubmit;
-			}
-		</script>
+		<script src="js/scripts.js"></script>
 	</body>
 </html>

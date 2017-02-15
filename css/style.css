@@ -449,7 +449,30 @@ footer .links {
 	border-top: 1px solid #E0E0E0;
 	border-bottom: 1px solid #E0E0E0;
 	background-color: #FBFCFC;
-	padding: 40px 20px;
+	padding: 20px 20px 40px;
+}
+
+.code-verifier p {
+	text-align: center;
+	line-height: 200%;
+}
+
+.code-verifier p span:first-child {
+    border: 1px solid #DEDEDE;
+    padding: 5px 10px;
+    border-radius: 4px 0 0 4px;
+    background: #F0EDED;
+    color: #999999;
+}
+
+.code-verifier p span:last-child {
+    border-top: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 5px 10px;
+    border-radius: 0 4px 4px 0;
+    background: #F4F4F4;
+    color: #999999;
 }
 
 .code ul li {
