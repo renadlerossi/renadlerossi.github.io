@@ -259,7 +259,7 @@ footer .links {
 }
 
 .input-wrapper input {
-	width: 70%;
+	width: calc(100% - 30px);
 	font-size: 2em;
 	border: 0;
 }
