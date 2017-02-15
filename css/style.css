@@ -250,7 +250,7 @@ footer .links {
 
 .input-wrapper {
 	float: left;
-	width: 55%;
+	width: 50%;
 	padding: 0 15px 15px;
 }
 
@@ -259,7 +259,7 @@ footer .links {
 }
 
 .input-wrapper input {
-	width: 80%;
+	width: 70%;
 	font-size: 2em;
 	border: 0;
 }
