@@ -160,6 +160,7 @@ footer .links {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
+    position: relative;
 }
 
 .logo {
@@ -249,7 +250,7 @@ footer .links {
 
 .input-wrapper {
 	float: left;
-	width: 60%;
+	width: 45%;
 	padding: 0 15px 15px;
 }
 
@@ -258,7 +259,7 @@ footer .links {
 }
 
 .input-wrapper input {
-	width: 60%;
+	width: 80%;
 	font-size: 2em;
 	border: 0;
 }
@@ -638,7 +639,7 @@ footer .links {
 	.transaction-details {
 		max-width: 300px;
 	}
-	.input-wrapper input {
-		width: 80%;
+	.input-wrapper {
+		width: 60%;
 	}
 }
