@@ -541,7 +541,7 @@ footer .links {
 
 .code ul li input:focus, .code ul li input:active {
 	outline: none;
-	border: #64B5F6;
+	border: 1px solid #64B5F6;
 }
 
 .verification-bottom {
