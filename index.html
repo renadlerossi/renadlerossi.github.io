@@ -45,13 +45,13 @@
 				<h3>Specify the amount to be sent or received.</h3>
 				<div class="transaction-form">
 					<form>
-						<div class="sender-value">
+						<div class="sender-value active" onclick="activefy(this);">
 							<div class="field-header">
 								<label>You send</label>
 							</div>
-							<div onclick="" onclick class="input-wrapper">
+							<div class="input-wrapper">
 								<span id="sender-symbol" class="currency-symbol">€</span>
-								<input id="input-sender" value="2000" type="text" name="sender" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="convertCurrency(this);">
+								<input id="input-sender" value="2000" type="text" name="sender" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="convertCurrency(this);"">
 							</div>
 							<div class="select-wrapper">
 								<span id="sender-flag" class="icon" style="background-image: url('images/eur.png'); background-position: center; background-size:100%;"></span>
@@ -60,7 +60,7 @@
 								<select id="sender-select" name="currencies" class="currencies"></select>
 							</div>
 						</div>
-						<div class="receiver-value">
+						<div class="receiver-value" onclick="activefy(this);">
 							<div class="field-header">
 								<label>Reciever Gets</label>
 							</div>

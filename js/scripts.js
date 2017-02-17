@@ -3,6 +3,22 @@
 		document.getElementById("float").classList.toggle('active');
 	}
 
+	//Flag input parent as active
+	function activefy(element) {
+		var parent_children = element.parentNode.childNodes;
+
+		// Clean all actives so we can re-access it
+		for (var i = 0; i < parent_children.length;) {
+			if (i % 2 == 0) {
+				i++;
+			} else {
+				parent_children[i].classList.remove('active');
+				i++;
+			}
+		}
+		element.classList.toggle('active');
+	}
+
 	// Check code inputs completion to enable verify button
 	function checkForm() {
 		var f = document.forms["codeform"].elements;
