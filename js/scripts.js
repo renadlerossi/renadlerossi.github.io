@@ -72,7 +72,7 @@
 		}
 	}
 
-	// Populate options for currency select
+	// Populate options for sender currency select
 	var selectSender = document.getElementById('sender-select');
 	for (var i = 0 in currenciesArray){
 	    var opt = document.createElement('option');
@@ -81,7 +81,7 @@
 	    selectSender.appendChild(opt);
 	}
 
-	// Populate options for currency select
+	// Populate options for receiver currency select
 	var selectReceiver = document.getElementById('receiver-select');
 	for (var i = 0 in currenciesArray){
 	    var opt = document.createElement('option');
@@ -102,6 +102,7 @@
 		sender_variables.flag.style.backgroundImage = "url(" + currenciesArray[sender_value].currencyFlag + ")";
 		receiver_variables.flag.style.backgroundImage = "url(" + currenciesArray[receiver_value].currencyFlag + ")";
 		receiver_variables.symbol.innerHTML = currenciesArray[receiver_value].currencySymbol;
+		convertCurrency(input_sender);
 	}
 
 	window.onload = function() {
